@@ -23,12 +23,12 @@ public class ApplebeesModule extends AbstractModule {
         bind(Applebees.class).in(Singleton.class);
 
         /*
-        .asEagerSingleton()	eager	eager
-        .in(Singleton.class)	eager	lazy
-        .in(Scopes.SINGLETON)	eager	lazy
-        @Singleton	eager*	lazy
-         Create bean with eager
+        #.asEagerSingleton()	eager	eager
+        #.in(Singleton.class)	eager	lazy
+        #.in(Scopes.SINGLETON)	eager	lazy
+        #@Singleton	            eager*	lazy
          */
+        //Create bean with eager
         bind(Bar.class).to(Applebees.class).asEagerSingleton();
         /*
         Create bean with lazy

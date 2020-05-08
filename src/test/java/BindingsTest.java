@@ -1,6 +1,7 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.rainbow.tony.guice.log.TransactionLog;
+import com.rainbow.tony.guice.module.BillingModule;
 import com.rainbow.tony.guice.module.DatabaseModule;
 import org.junit.Test;
 
@@ -16,6 +17,13 @@ public class BindingsTest {
         Injector injector = Guice.createInjector(new DatabaseModule());
         TransactionLog instance = injector.getInstance(TransactionLog.class);
 
+        instance.logConnectException(new RuntimeException("Database has occurred some error."));
+    }
+
+    @Test
+    public void constructorTest() {
+        Injector injector = Guice.createInjector(new BillingModule());
+        TransactionLog instance = injector.getInstance(TransactionLog.class);
         instance.logConnectException(new RuntimeException("Database has occurred some error."));
     }
 }

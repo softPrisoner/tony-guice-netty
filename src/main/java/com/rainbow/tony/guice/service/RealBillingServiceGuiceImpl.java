@@ -1,7 +1,6 @@
 package com.rainbow.tony.guice.service;
 
 import com.google.inject.Inject;
-import com.google.inject.name.Named;
 import com.rainbow.tony.guice.annotation.PayPal;
 import com.rainbow.tony.guice.base.ChargeResult;
 import com.rainbow.tony.guice.base.CreditCard;
@@ -38,11 +37,12 @@ public class RealBillingServiceGuiceImpl implements BillingService {
     /**
      * @param processor      CreditCardProcessor
      * @param transactionLog TransactionLog
+     * @Named("Checkout")
      * @Named describe the bean name not a class type.
      * @PayPal describe the bean by the manual annotation.
      */
     @Inject
-    public RealBillingServiceGuiceImpl(@PayPal @Named("Checkout") CreditCardProcessor processor, TransactionLog transactionLog) {
+    public RealBillingServiceGuiceImpl(@PayPal CreditCardProcessor processor, TransactionLog transactionLog) {
         //dependency inject
         this.transactionLog = transactionLog;
         this.processor = processor;
