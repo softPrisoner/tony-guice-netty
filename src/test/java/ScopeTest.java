@@ -1,9 +1,9 @@
-package com.rainbow.tony.guice.scope;
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Provider;
 import com.rainbow.tony.guice.module.ApplebeesModule;
+import com.rainbow.tony.guice.scope.Bar;
+import com.rainbow.tony.guice.scope.Grill;
 
 import java.util.Objects;
 

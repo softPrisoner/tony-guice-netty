@@ -18,6 +18,6 @@ public class DatabaseTransactionLog implements TransactionLog {
 
     @Override
     public void logConnectException(Exception e) {
-
+        System.out.println(e.getMessage());
     }
 }
