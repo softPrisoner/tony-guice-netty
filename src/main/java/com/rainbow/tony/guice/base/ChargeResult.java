@@ -18,4 +18,8 @@ public class ChargeResult {
     public String getDeclineMessage() {
         return declineMessage;
     }
+
+    public void setDeclineMessage(String declineMessage) {
+        this.declineMessage = declineMessage;
+    }
 }

@@ -1,7 +1,5 @@
 package com.rainbow.tony.guice.order;
 
-import java.math.BigDecimal;
-
 /**
  * PizzaOrder
  *
