@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'scala'
+}
+
+group 'com.tony'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+    mavenCentral()
+}
+
+dependencies {
+
+}
+configurations {
+    all*.exclude group: 'ch.qos.logback', module: 'logback-core'
+    all*.exclude group: 'ch.qos.logback', module: 'logback-classic'
+    all*.exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
+}
