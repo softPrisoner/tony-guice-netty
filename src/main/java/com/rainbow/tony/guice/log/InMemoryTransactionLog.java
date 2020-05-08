@@ -1,5 +1,6 @@
 package com.rainbow.tony.guice.log;
 
+import com.google.inject.Singleton;
 import com.rainbow.tony.guice.base.ChargeResult;
 
 /**
@@ -8,6 +9,7 @@ import com.rainbow.tony.guice.base.ChargeResult;
  * @description InMemoryTransactionLog
  * @date 2020-05-08
  */
+@Singleton
 public class InMemoryTransactionLog implements TransactionLog {
     private boolean wasSuccessLogged;
 
