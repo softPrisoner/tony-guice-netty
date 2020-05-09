@@ -2,8 +2,8 @@ package com.rainbow.tony.guice.handler;
 
 import com.google.inject.Inject;
 import com.rainbow.tony.guice.base.Request;
-import com.rainbow.tony.guice.base.RequestLogger;
 import com.rainbow.tony.guice.base.Response;
+import com.rainbow.tony.guice.log.logger.RequestLogger;
 
 import java.util.Optional;
 

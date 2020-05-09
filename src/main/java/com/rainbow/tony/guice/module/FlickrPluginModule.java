@@ -1,8 +1,7 @@
 package com.rainbow.tony.guice.module;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.multibindings.MapBinder;
-import com.google.inject.multibindings.Multibinder;
+import com.google.inject.multibindings.*;
 import com.rainbow.tony.guice.plugin.FlickrPhotoSummarizer;
 import com.rainbow.tony.guice.plugin.UriSummarizer;
 
@@ -23,5 +22,16 @@ public class FlickrPluginModule extends AbstractModule {
                 MapBinder.newMapBinder(binder(), String.class, UriSummarizer.class);
         uriBinder2.addBinding("Flickr").to(FlickrPhotoSummarizer.class);
         // bind plugin dependencies, such as our Flickr API key
+    }
+
+    @ProvidesIntoSet
+    UriSummarizer provideFlickerUriSummarizer() {
+        return new FlickrPhotoSummarizer();
+    }
+
+    @StringMapKey("Flickr")
+    @ProvidesIntoMap
+    UriSummarizer provideFlickrUriSummarizer() {
+        return new FlickrPhotoSummarizer();
     }
 }

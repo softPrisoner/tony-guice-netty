@@ -2,7 +2,7 @@ package com.rainbow.tony.guice.module;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.OptionalBinder;
-import com.rainbow.tony.guice.base.RequestLogger;
+import com.rainbow.tony.guice.log.logger.RequestLogger;
 
 /**
  * @author wabslygzj@163.com (Tony Li)

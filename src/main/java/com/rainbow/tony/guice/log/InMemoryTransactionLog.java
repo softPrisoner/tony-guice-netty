@@ -11,6 +11,7 @@ import com.rainbow.tony.guice.base.ChargeResult;
  */
 @Singleton
 public class InMemoryTransactionLog implements TransactionLog {
+
     private boolean wasSuccessLogged;
 
     @Override

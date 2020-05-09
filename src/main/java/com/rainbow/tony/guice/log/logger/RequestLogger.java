@@ -1,4 +1,7 @@
-package com.rainbow.tony.guice.base;
+package com.rainbow.tony.guice.log.logger;
+
+import com.rainbow.tony.guice.base.Request;
+import com.rainbow.tony.guice.base.Response;
 
 /**
  * @author wabslygzj@163.com (Tony Li)
