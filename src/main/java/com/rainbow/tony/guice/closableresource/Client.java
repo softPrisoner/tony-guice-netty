@@ -5,7 +5,16 @@ import com.google.inject.Inject;
 
 import java.io.IOException;
 
+/**
+ * @author wabslygzj@163.com (Tony Li)
+ * @copyright rainbow
+ * @description Client
+ * @date 2020-05-11
+ */
 class Client {
+    /**
+     * CharSink
+     */
     private final CharSink sink;
 
     /**
