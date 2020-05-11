@@ -14,14 +14,17 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @date 2020-05-08
  */
 public class GuiceDemo {
+
     @Qualifier
     @Retention(RUNTIME)
     @interface Message {
+
     }
 
     @Qualifier
     @Retention(RUNTIME)
     @interface Count {
+
     }
 
     static class DemoModule extends AbstractModule {
@@ -39,7 +42,9 @@ public class GuiceDemo {
     }
 
     static class Greeter {
+
         private final String message;
+
         private final int count;
 
         // Greeter declares that it needs a string message and an integer

@@ -9,6 +9,9 @@ package com.rainbow.tony.guice.base;
  * @date 2020-05-08
  */
 public class ChargeResult {
+    /**
+     * decline message
+     */
     private String declineMessage;
 
     public boolean wasSuccessful() {

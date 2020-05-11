@@ -8,20 +8,29 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 repositories {
     maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
     mavenCentral()
 }
 
 dependencies {
+    //servlet
+    compile 'javax.servlet:javax.servlet-api:4.0.0'
+    //guice
     compile 'com.google.inject:guice:4.0'
+    //servlet
+    compile 'com.google.inject.extensions:guice-servlet:4.0'
+    //persist
+    compile 'com.google.inject.extensions:guice-persist:4.0'
+    //multi bind
     compile 'com.google.inject.extensions:guice-multibindings:4.0'
+    //netty
     compile 'io.netty:netty-all:4.1.6.Final'
+    //hibernate
+    compile 'org.hibernate:hibernate-entitymanager:4.3.11.Final'
+    //stdlib
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    //junit
     testCompile group: 'junit', name: 'junit', version: '4.12'
-}
-configurations {
-    all*.exclude group: 'ch.qos.logback', module: 'logback-core'
-    all*.exclude group: 'ch.qos.logback', module: 'logback-classic'
-    all*.exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
 }

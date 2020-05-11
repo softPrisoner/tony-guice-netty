@@ -26,6 +26,11 @@ class Client {
         this.sink = sink;
     }
 
+    /**
+     * Do some thing
+     *
+     * @throws IOException IOEx
+     */
     public void doSomething() throws IOException {
         //Opens the file at this point, and closes once its done.
         sink.write("hello!");

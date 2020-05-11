@@ -7,8 +7,17 @@ package com.rainbow.tony.guice.base;
  * @date 2020-05-09
  */
 public class Photo {
+    /**
+     * Id
+     */
     private String id;
+    /**
+     * url
+     */
     private String url;
+    /**
+     * title
+     */
     private String title;
 
     public String getId() {

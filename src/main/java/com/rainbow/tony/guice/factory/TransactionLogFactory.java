@@ -4,11 +4,11 @@ import com.rainbow.tony.guice.log.DatabaseTransactionLog;
 import com.rainbow.tony.guice.log.TransactionLog;
 
 /**
- * CreditCardProcessorFactory
+ * TransactionLogFactory
  *
  * @author tony
  * @copyright rainbow
- * @description CreditCardProcessorFactory
+ * @description TransactionLogFactory
  * @date 2020-05-08
  */
 public class TransactionLogFactory {
