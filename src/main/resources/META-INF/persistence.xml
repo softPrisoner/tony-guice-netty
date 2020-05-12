@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+
+    <!-- A JPA Persistence Unit -->
+    <persistence-unit name="myFirstJpaUnit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <!-- JPA entities must be registered here -->
+        <class>com.wideplay.warp.jpa.JpaTestEntity</class>
+
+        <properties>
+            <!-- vendor-specific properties go here -->
+        </properties>
+    </persistence-unit>
+
+</persistence>

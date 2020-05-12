@@ -9,6 +9,9 @@ package com.rainbow.tony.guice.order;
  * @date 2020-05-08
  */
 public abstract class BaseOrder {
+    /**
+     * amount
+     */
     protected Integer amount;
 
     public BaseOrder(Integer amount) {

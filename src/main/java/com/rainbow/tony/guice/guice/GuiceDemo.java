@@ -42,9 +42,9 @@ public class GuiceDemo {
     }
 
     static class Greeter {
-
+        //message
         private final String message;
-
+        //count
         private final int count;
 
         // Greeter declares that it needs a string message and an integer
